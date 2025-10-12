@@ -1,0 +1,11 @@
+- [x] Update index.html with title "Turbo Racers" and 4 buttons
+- [x] Update style.css with attractive racing theme styles
+- [x] Enhance button interactivity: remove circular border animation, add more hover effects
+- [x] Remove all button interactions (hover effects)
+- [x] Change title to more game-like and professional, enhance styling
+- [x] Position buttons in bottom-left corner
+- [x] Make buttons smaller and closer together
+- [x] Move title to top-left corner
+- [x] Remove all styles from title
+- [x] Make title more professional
+- [x] Move buttons to left side, middle of the page

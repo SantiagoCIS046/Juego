@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+  color: white;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.title {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: "Impact", sans-serif;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.buttons {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.game-button {
+  background: transparent;
+  border: 2px solid #ff6b6b;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.game-button.exit {
+  border-color: #ff4757;
+}
