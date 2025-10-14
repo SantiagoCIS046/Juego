@@ -3,7 +3,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const video = document.getElementById("intro-video");
   const audio = document.getElementById("intro-audio");
 
-  // Ensure audio plays in sync with video
+  // Forzar video y audio a reproducirse automáticamente al cargar la página
+  video.play();
+  audio.play();
+
+  // Asegurar que el audio se reproduzca en sincronía con el video
   video.addEventListener("play", function () {
     audio.play();
   });
@@ -12,15 +16,17 @@ document.addEventListener("DOMContentLoaded", function () {
     audio.pause();
   });
 
-  // Navigation is now handled by the <a> tag, but we can keep this for additional logic if needed
+  // La navegación ahora se maneja con la etiqueta <a>, pero podemos mantener esto para lógica adicional si es necesario
 
-  // Optional: Unmute audio on first user interaction (to comply with autoplay policies)
+  // Opcional: Desmutear audio en la primera interacción del usuario (para cumplir con las políticas de reproducción automática)
   goToGameButton.addEventListener("click", function () {
     audio.muted = false;
     video.muted = false;
   });
 
-  // Ensure audio is not muted initially if possible, but handle browser restrictions
+  // Asegurar que el audio no esté muteado inicialmente si es posible, pero manejar restricciones del navegador
   audio.muted = false;
   video.muted = false;
+  // Mantener video muteado para cumplir con políticas de reproducción automática
+  // video.muted = false; // Comentado para permitir reproducción automática
 });
