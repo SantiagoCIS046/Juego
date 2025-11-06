@@ -4,8 +4,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const audio = document.getElementById("intro-audio");
 
   // Forzar video y audio a reproducirse automáticamente al cargar la página
-  video.play();
-  audio.play();
+  video.play().catch((e) => console.log("Video play failed:", e));
+  audio.play().catch((e) => console.log("Audio play failed:", e));
 
   // Asegurar que el audio se reproduzca en sincronía con el video
   video.addEventListener("play", function () {
@@ -24,9 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
     video.muted = false;
   });
 
-  // Asegurar que el audio no esté muteado inicialmente si es posible, pero manejar restricciones del navegador
-  audio.muted = false;
-  video.muted = false;
-  // Mantener video muteado para cumplir con políticas de reproducción automática
-  // video.muted = false; // Comentado para permitir reproducción automática
+  // Ambos muted inicialmente para permitir reproducción automática
+  audio.muted = true;
+  video.muted = true;
 });
