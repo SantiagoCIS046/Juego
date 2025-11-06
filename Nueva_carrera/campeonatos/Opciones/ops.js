@@ -12,13 +12,34 @@ function setVolume(value) {
   localStorage.setItem("gameVolume", value);
 }
 
+function toggleGraphicsOptions() {
+  const graphicsOptions = document.getElementById("graphics-options");
+  graphicsOptions.classList.toggle("hidden");
+}
+
 function setGraphics(value) {
   // Guardar la selección en localStorage
   localStorage.setItem("gameGraphics", value);
   console.log("Gráficos ajustados a:", value);
 }
 
-// Cargar volumen y gráficos guardados al cargar la página
+function toggleControlsOptions() {
+  const controlsOptions = document.getElementById("controls-options");
+  controlsOptions.classList.toggle("hidden");
+}
+
+function toggleLanguageOptions() {
+  const languageOptions = document.getElementById("language-options");
+  languageOptions.classList.toggle("hidden");
+}
+
+function setLanguage(value) {
+  // Guardar la selección en localStorage
+  localStorage.setItem("gameLanguage", value);
+  console.log("Idioma ajustado a:", value);
+}
+
+// Cargar configuraciones guardadas al cargar la página
 window.onload = function () {
   const savedVolume = localStorage.getItem("gameVolume");
   if (savedVolume !== null) {
@@ -31,6 +52,17 @@ window.onload = function () {
     const radios = document.getElementsByName("graphics");
     for (let radio of radios) {
       if (radio.value === savedGraphics) {
+        radio.checked = true;
+        break;
+      }
+    }
+  }
+
+  const savedLanguage = localStorage.getItem("gameLanguage");
+  if (savedLanguage !== null) {
+    const radios = document.getElementsByName("language");
+    for (let radio of radios) {
+      if (radio.value === savedLanguage) {
         radio.checked = true;
         break;
       }

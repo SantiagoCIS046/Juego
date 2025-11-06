@@ -221,6 +221,28 @@ h1 {
   border-color: #03396070;
 }
 
+.volume-options label {
+  display: block;
+  margin: 10px 0;
+  color: white;
+  font-size: 1.2em;
+  text-shadow: 0 0 10px #00ffff3f;
+}
+
+.volume-options input[type="radio"] {
+  margin-right: 10px;
+}
+
+.volume-options ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.volume-options li {
+  margin: 5px 0;
+  font-size: 1.1em;
+}
+
 .hidden {
   display: none;
 }

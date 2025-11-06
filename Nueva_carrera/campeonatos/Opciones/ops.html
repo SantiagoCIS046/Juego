@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Opciones</title>
+    <link rel="icon" href="../../../public/icono.png" type="image/png" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="ops.js"></script>
+  </head>
+  <body>
+    <video id="background-video" autoplay muted loop>
+      <source src="Video-bmw.mp4" type="video/mp4" />
+    </video>
+    <div class="container">
+      <h1>Opciones</h1>
+      <div class="options-grid">
+        <div class="option-item">
+          <button class="option-btn" onclick="toggleVolumeOptions()">
+            Volumen
+          </button>
+        </div>
+        <div class="option-item">
+          <button class="option-btn" onclick="toggleGraphicsOptions()">
+            Gráficos
+          </button>
+        </div>
+        <div class="option-item">
+          <button class="option-btn" onclick="toggleControlsOptions()">
+            Controles
+          </button>
+        </div>
+        <div class="option-item">
+          <button class="option-btn" onclick="toggleLanguageOptions()">
+            Idioma
+          </button>
+        </div>
+      </div>
+      <div id="volume-options" class="volume-options hidden">
+        <div class="modal-content">
+          <h2>Ajustar Volumen</h2>
+          <label for="volume-slider">Volumen:</label>
+          <input
+            type="range"
+            id="volume-slider"
+            min="0"
+            max="100"
+            value="50"
+            title="Ajustar volumen"
+            oninput="setVolume(this.value)"
+          />
+          <div id="volume-value">50</div>
+          <button class="close-btn" onclick="toggleVolumeOptions()">
+            Cerrar
+          </button>
+        </div>
+      </div>
+
+      <div id="graphics-options" class="volume-options hidden">
+        <div class="modal-content">
+          <h2>Seleccionar Gráficos</h2>
+          <form id="graphics-form">
+            <label>
+              <input
+                type="radio"
+                name="graphics"
+                value="low"
+                onchange="setGraphics(this.value)"
+              />
+              Bajo
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="graphics"
+                value="medium"
+                onchange="setGraphics(this.value)"
+              />
+              Medio
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="graphics"
+                value="high"
+                onchange="setGraphics(this.value)"
+              />
+              Alto
+            </label>
+          </form>
+          <button class="close-btn" onclick="toggleGraphicsOptions()">
+            Cerrar
+          </button>
+        </div>
+      </div>
+
+      <div id="controls-options" class="volume-options hidden">
+        <div class="modal-content">
+          <h2>Configurar Controles</h2>
+          <p>Controles predeterminados:</p>
+          <ul style="text-align: left; color: white">
+            <li>Acelerar: W</li>
+            <li>Frenar: S</li>
+            <li>Girar Izquierda: A</li>
+            <li>Girar Derecha: D</li>
+            <li>Pausa: Espacio</li>
+          </ul>
+          <button class="close-btn" onclick="toggleControlsOptions()">
+            Cerrar
+          </button>
+        </div>
+      </div>
+
+      <div id="language-options" class="volume-options hidden">
+        <div class="modal-content">
+          <h2>Seleccionar Idioma</h2>
+          <form id="language-form">
+            <label>
+              <input
+                type="radio"
+                name="language"
+                value="es"
+                onchange="setLanguage(this.value)"
+              />
+              Español
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="language"
+                value="en"
+                onchange="setLanguage(this.value)"
+              />
+              English
+            </label>
+          </form>
+          <button class="close-btn" onclick="toggleLanguageOptions()">
+            Cerrar
+          </button>
+        </div>
+      </div>
+
+      <div class="salir-container">
+        <a href="../camp.html" class="option-btn salir-btn">Volver</a>
+      </div>
+    </div>
+  </body>
+</html>
