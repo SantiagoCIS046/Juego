@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ajustes</title>
+    <link rel="icon" href="../public/icono.png" type="image/png" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="ajust.js"></script>
+  </head>
+  <body>
+    <div class="animated-bg"></div>
+    <div class="dark-overlay"></div>
+    <img id="background-image" src="fondo-ajust.jpg" alt="Background" />
+    <div class="container">
+      <h1>Ajustes</h1>
+      <div class="main-buttons">
+        <button class="settings-btn" onclick="toggleSettings()">
+          ⚙️ Configuración
+        </button>
+        <button
+          class="back-btn"
+          onclick="window.location.href='../Inicio_juego/start.html'"
+        >
+          ← Volver
+        </button>
+      </div>
+    </div>
+
+    <!-- Settings Bar -->
+    <div id="settings-bar" class="settings-bar hidden">
+      <div class="bar-header">
+        <h2>Configuración</h2>
+        <button class="close-bar-btn" onclick="toggleSettings()">✕</button>
+      </div>
+      <div class="bar-content">
+        <div class="setting-group">
+          <label for="volume-slider">Volumen General</label>
+          <input
+            type="range"
+            id="volume-slider"
+            min="0"
+            max="100"
+            value="50"
+            oninput="setVolume(this.value)"
+          />
+          <span id="volume-value">50</span>
+        </div>
+
+        <div class="setting-group">
+          <label for="music-slider">Volumen Música</label>
+          <input
+            type="range"
+            id="music-slider"
+            min="0"
+            max="100"
+            value="70"
+            oninput="setMusicVolume(this.value)"
+          />
+          <span id="music-value">70</span>
+        </div>
+
+        <div class="setting-group">
+          <label for="sfx-slider">Volumen Efectos</label>
+          <input
+            type="range"
+            id="sfx-slider"
+            min="0"
+            max="100"
+            value="80"
+            oninput="setSFXVolume(this.value)"
+          />
+          <span id="sfx-value">80</span>
+        </div>
+
+        <div class="setting-group">
+          <label>Gráficos</label>
+          <div class="radio-group">
+            <label
+              ><input
+                type="radio"
+                name="graphics"
+                value="low"
+                onchange="setGraphics('low')"
+              />
+              Bajo</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="graphics"
+                value="medium"
+                onchange="setGraphics('medium')"
+              />
+              Medio</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="graphics"
+                value="high"
+                onchange="setGraphics('high')"
+              />
+              Alto</label
+            >
+          </div>
+        </div>
+
+        <div class="setting-group">
+          <label>Resolución</label>
+          <div class="radio-group">
+            <label
+              ><input
+                type="radio"
+                name="resolution"
+                value="720p"
+                onchange="setResolution('720p')"
+              />
+              720p</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="resolution"
+                value="1080p"
+                onchange="setResolution('1080p')"
+              />
+              1080p</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="resolution"
+                value="1440p"
+                onchange="setResolution('1440p')"
+              />
+              1440p</label
+            >
+          </div>
+        </div>
+
+        <div class="setting-group">
+          <label>Idioma</label>
+          <div class="radio-group">
+            <label
+              ><input
+                type="radio"
+                name="language"
+                value="es"
+                onchange="setLanguage('es')"
+              />
+              Español</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="language"
+                value="en"
+                onchange="setLanguage('en')"
+              />
+              English</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="language"
+                value="fr"
+                onchange="setLanguage('fr')"
+              />
+              Français</label
+            >
+          </div>
+        </div>
+
+        <div class="setting-group">
+          <label>Modo de Juego</label>
+          <div class="radio-group">
+            <label
+              ><input
+                type="radio"
+                name="gamemode"
+                value="single"
+                onchange="setGameMode('single')"
+              />
+              Un Jugador</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="gamemode"
+                value="multi"
+                onchange="setGameMode('multi')"
+              />
+              Multijugador</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="gamemode"
+                value="career"
+                onchange="setGameMode('career')"
+              />
+              Carrera</label
+            >
+          </div>
+        </div>
+
+        <div class="setting-group">
+          <label>Dificultad</label>
+          <div class="radio-group">
+            <label
+              ><input
+                type="radio"
+                name="difficulty"
+                value="easy"
+                onchange="setDifficulty('easy')"
+              />
+              Fácil</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="difficulty"
+                value="normal"
+                onchange="setDifficulty('normal')"
+              />
+              Normal</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="difficulty"
+                value="hard"
+                onchange="setDifficulty('hard')"
+              />
+              Difícil</label
+            >
+          </div>
+        </div>
+
+        <div class="setting-group">
+          <label>Controles</label>
+          <div class="radio-group">
+            <label
+              ><input
+                type="radio"
+                name="controls"
+                value="keyboard"
+                onchange="setControls('keyboard')"
+              />
+              Teclado</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="controls"
+                value="gamepad"
+                onchange="setControls('gamepad')"
+              />
+              Gamepad</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="controls"
+                value="wheel"
+                onchange="setControls('wheel')"
+              />
+              Volante</label
+            >
+          </div>
+        </div>
+
+        <div class="setting-group">
+          <label>
+            <input
+              type="checkbox"
+              id="fullscreen-toggle"
+              onchange="toggleFullscreen()"
+            />
+            Pantalla Completa
+          </label>
+        </div>
+
+        <div class="setting-group">
+          <label>
+            <input type="checkbox" id="vsync-toggle" onchange="toggleVSync()" />
+            V-Sync
+          </label>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
