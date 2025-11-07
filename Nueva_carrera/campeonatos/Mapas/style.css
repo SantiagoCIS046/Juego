@@ -2,21 +2,14 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Arial", sans-serif;
-  background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+  background-image: url("audi-e-tron-nfs-heat_3840x2160_xtrafondos.com.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: white;
   height: 100vh;
   overflow: hidden;
   position: relative;
-}
-
-#background-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  z-index: -1;
 }
 
 .container {
@@ -82,8 +75,8 @@ body {
 
 .volver-btn {
   background: rgba(0, 0, 0, 0.752);
-  border: 2px solid #f60c0c;
-  color: rgb(0, 0, 0);
+  border: 2px solid #f60c0c00;
+  color: rgb(155, 155, 155);
   padding: 0.3rem 0.8rem;
   font-size: 0.9rem;
   cursor: pointer;
@@ -105,11 +98,11 @@ body {
   justify-content: center;
   align-items: center;
   transform: translateX(-50%) scale(0.95);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px rgba(95, 95, 95, 0.2);
 }
 
 .volver-btn:hover {
-  background-color: rgba(45, 45, 45, 0.412);
+  background-color: rgba(6, 6, 6, 0.412);
   transform: translateX(-50%) scale(1.05);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
