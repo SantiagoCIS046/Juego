@@ -1,4 +1,11 @@
 {
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/Inicio_juego/index.html",
+      "permanent": true
+    }
+  ],
   "version": 2,
   "builds": [
     {
