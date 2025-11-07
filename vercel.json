@@ -1,9 +1,0 @@
-{
-  "version": 2,
-  "builds": [
-    {
-      "src": "./Inicio_juego/start.html",
-      "use": "@vercel/static"
-    }
-  ]
-}
