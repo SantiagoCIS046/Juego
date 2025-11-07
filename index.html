@@ -2,24 +2,29 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Inicio de Juego</title>
-    <link rel="icon" href="./public/icono.png" type="image/png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="refresh" content="0; url=/Inicio_juego/start.html" />
+    <title>Intro del juego</title>
+    <link rel="icon" href="public/icono.png" type="image/png" />
     <link rel="stylesheet" href="style.css" />
+    <script src="enlaces.js"></script>
   </head>
   <body>
-    <video id="background-video" autoplay muted loop>
-      <source src="Bmw en movimiento.mp4" type="video/mp4" />
-    </video>
-    <h1 class="title">Fasts and Furious</h1>
-    <div class="buttons">
-      <a href="./Nueva_carrera/new_car.html" class="game-button"
-        >Nueva Carrera</a
-      >
-      <button class="game-button">Cargar Carrera</button>
-      <a href="./Ajustes/ajust.html" class="game-button">Ajustes</a>
-      <a href="./index.html" class="game-button">Volver a Intro</a>
-      <a href="https://www.google.com" class="game-button exit">Salir</a>
-    </div>
+    <video
+      id="intro-video"
+      src="fondo/intro-video.mp4"
+      autoplay
+      muted
+      loop
+      title="Video introductorio del juego"
+    ></video>
+    <audio
+      id="intro-audio"
+      src="fondo/intro-audio.weba"
+      autoplay
+      muted
+      loop
+    ></audio>
+    <p>Redirigiendo a la aplicación...</p>
   </body>
 </html>
